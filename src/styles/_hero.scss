@@ -1,0 +1,161 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  z-index: -1;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.hero-section h1 {
+  font-size: 5rem;
+  font-family: "Delicious Handrawn", cursive;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-shadow: 0 0 5px var(--secundary-color), 0 0 10px var(--secundary-color),
+    0 0 10px var(--text-shadow-1), 0 0 15px var(--text-shadow-1);
+}
+
+.hero-section p {
+  font-size: 2rem;
+  letter-spacing: 0.3px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  a {
+    color: var(--secundary-color);
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+.hero-section .hero-text {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.hero-section #countdown {
+  font-size: 3rem;
+  font-family: "Delicious Handrawn", cursive;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 73%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-shadow: var(--secundary-color) 0px 0px 5px,
+    var(--secundary-color) 0px 0px 10px, var(--text-shadow-2) 0px 0px 10px,
+    var(--text-shadow-2) 0px 0px 20px;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+@media only screen and (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 3rem;
+    top: 15%;
+  }
+
+  .hero-section p {
+    font-size: 1.5rem;
+    top: 60%;
+  }
+
+  .hero-section .hero-text {
+    font-size: 1.2rem;
+    top: 40%;
+  }
+  .hero-section #countdown {
+    top: 68%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 2rem;
+    top: 15%;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+    top: 70%;
+  }
+
+  .hero-section .hero-text {
+    font-size: 1rem;
+    top: 45%;
+  }
+  .hero-section #countdown {
+    font-size: 2rem;
+    top: 75%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .hero-section h1 {
+    font-size: 2rem;
+    top: 10%;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+    top: 75%;
+  }
+
+  .hero-section .hero-text {
+    font-size: 1rem;
+    top: 45%;
+  }
+  .hero-section #countdown {
+    font-size: 1.8rem;
+    top: 80%;
+  }
+  button {
+    top: 90%;
+  }
+}
